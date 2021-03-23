@@ -3,26 +3,25 @@
 import SwiftUI
 
 struct ContentView: View {
-  @State private var selection = 1
+  @EnvironmentObject var router: Router
   var body: some View {
-    TabView(selection: $selection) {
-      DashboardScreen(tabSelection: $selection)
+    TabView(selection: $router.selection) {
+      DashboardScreen()
         .tabItem {
           VStack{
             Text("Main")
-            Image(systemName: "star")
+            Image(systemName: "sparkle")
               .font(Font.largeTitle.weight(.heavy))
           }
         }
         .tag(0)
-      FoodScreen()
-        .tabItem {
-          Text("Food")
-          Image(systemName: "flame.fill")
-            .font(Font.footnote.weight(.ultraLight))
-        }
-        .tag(1)
-      
+            FoodScreen()
+              .tabItem {
+                Text("Food")
+                Image(systemName: "flame.fill")
+                  .font(Font.footnote.weight(.ultraLight))
+              }
+              .tag(1)
       
       AboutScreen()
         .tabItem {
@@ -32,13 +31,12 @@ struct ContentView: View {
         .tag(2)
       
       
-//      FoodScreenOld()
-//        .tabItem {
-//          Text("Old")
-//          Image(systemName: "pills")
-//        }
-//        .tag(3)
-      
+      FoodScreenOld()
+        .tabItem {
+          Text("Old")
+          Image(systemName: "pills")
+        }
+        .tag(3)
     }.accentColor(.red)
   }
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		574F866226092C3000B49803 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574F866126092C3000B49803 /* Router.swift */; };
 		577DE52F25FA872F001F71D7 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 577DE52E25FA872F001F71D7 /* .gitignore */; };
 		577F235125F9650900A24403 /* DashboardScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577F235025F9650900A24403 /* DashboardScreen.swift */; };
 		577F237F25F97DC800A24403 /* FoodScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577F237E25F97DC800A24403 /* FoodScreen.swift */; };
@@ -22,9 +23,12 @@
 		578D0D2725F0245A0067D911 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 578D0D2625F0245A0067D911 /* Preview Assets.xcassets */; };
 		578D0D3025F02DF50067D911 /* AboutScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578D0D2F25F02DF50067D911 /* AboutScreen.swift */; };
 		578D0D3325F02FCC0067D911 /* FoodScreenOld.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578D0D3225F02FCC0067D911 /* FoodScreenOld.swift */; };
+		57DB9A99260A187E0018DD1A /* SomeUIKitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DB9A98260A187E0018DD1A /* SomeUIKitVC.swift */; };
+		57DB9AA1260A1C780018DD1A /* SomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DB9AA0260A1C780018DD1A /* SomeVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		574F866126092C3000B49803 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		577DE52E25FA872F001F71D7 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		577F235025F9650900A24403 /* DashboardScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardScreen.swift; sourceTree = "<group>"; };
 		577F237E25F97DC800A24403 /* FoodScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodScreen.swift; sourceTree = "<group>"; };
@@ -42,6 +46,8 @@
 		578D0D2825F0245A0067D911 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		578D0D2F25F02DF50067D911 /* AboutScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutScreen.swift; sourceTree = "<group>"; };
 		578D0D3225F02FCC0067D911 /* FoodScreenOld.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodScreenOld.swift; sourceTree = "<group>"; };
+		57DB9A98260A187E0018DD1A /* SomeUIKitVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeUIKitVC.swift; sourceTree = "<group>"; };
+		57DB9AA0260A1C780018DD1A /* SomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +61,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		574F866526092C4600B49803 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				574F866126092C3000B49803 /* Router.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		577F235425F9654E00A24403 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				577F235025F9650900A24403 /* DashboardScreen.swift */,
-				577F237E25F97DC800A24403 /* FoodScreen.swift */,
-				577F23AA25F9A65C00A24403 /* FoodDetailScreen.swift */,
-				578D0D2F25F02DF50067D911 /* AboutScreen.swift */,
+				57DB9AA5260A25530018DD1A /* 1_DashBoard */,
+				57DB9AA6260A256D0018DD1A /* 2_Food */,
+				57DB9AA7260A25810018DD1A /* 3_About */,
 				578D0D3225F02FCC0067D911 /* FoodScreenOld.swift */,
 			);
 			path = Screens;
@@ -114,10 +127,9 @@
 				578D0D1F25F024580067D911 /* AppSUIApp.swift */,
 				578D0D2125F024580067D911 /* ContentView.swift */,
 				577F23A725F9A32600A24403 /* RemoteImage.swift */,
-				577F239D25F9973500A24403 /* RefreshScrollView.swift */,
-				577F239225F98E3A00A24403 /* Constant */,
-				577F238825F98C0300A24403 /* Models */,
-				577F238625F98BDA00A24403 /* Objects */,
+				57DB9AA8260A25D80018DD1A /* Networking */,
+				57DB9A9F260A1C670018DD1A /* Representable */,
+				574F866526092C4600B49803 /* Services */,
 				577F235425F9654E00A24403 /* Screens */,
 				578D0D2325F0245A0067D911 /* Assets.xcassets */,
 				578D0D2825F0245A0067D911 /* Info.plist */,
@@ -132,6 +144,51 @@
 				578D0D2625F0245A0067D911 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		57DB9A9F260A1C670018DD1A /* Representable */ = {
+			isa = PBXGroup;
+			children = (
+				577F239D25F9973500A24403 /* RefreshScrollView.swift */,
+				57DB9A98260A187E0018DD1A /* SomeUIKitVC.swift */,
+				57DB9AA0260A1C780018DD1A /* SomeVC.swift */,
+			);
+			path = Representable;
+			sourceTree = "<group>";
+		};
+		57DB9AA5260A25530018DD1A /* 1_DashBoard */ = {
+			isa = PBXGroup;
+			children = (
+				577F235025F9650900A24403 /* DashboardScreen.swift */,
+			);
+			path = 1_DashBoard;
+			sourceTree = "<group>";
+		};
+		57DB9AA6260A256D0018DD1A /* 2_Food */ = {
+			isa = PBXGroup;
+			children = (
+				577F237E25F97DC800A24403 /* FoodScreen.swift */,
+				577F23AA25F9A65C00A24403 /* FoodDetailScreen.swift */,
+			);
+			path = 2_Food;
+			sourceTree = "<group>";
+		};
+		57DB9AA7260A25810018DD1A /* 3_About */ = {
+			isa = PBXGroup;
+			children = (
+				578D0D2F25F02DF50067D911 /* AboutScreen.swift */,
+			);
+			path = 3_About;
+			sourceTree = "<group>";
+		};
+		57DB9AA8260A25D80018DD1A /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				577F239225F98E3A00A24403 /* Constant */,
+				577F238825F98C0300A24403 /* Models */,
+				577F238625F98BDA00A24403 /* Objects */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,12 +267,15 @@
 				577F23A825F9A32600A24403 /* RemoteImage.swift in Sources */,
 				577F238A25F98C1300A24403 /* Receipt.swift in Sources */,
 				578D0D2025F024580067D911 /* AppSUIApp.swift in Sources */,
+				57DB9AA1260A1C780018DD1A /* SomeVC.swift in Sources */,
 				577F239E25F9973500A24403 /* RefreshScrollView.swift in Sources */,
 				577F23AB25F9A65C00A24403 /* FoodDetailScreen.swift in Sources */,
 				577F238F25F98DFC00A24403 /* URLS.swift in Sources */,
 				577F237F25F97DC800A24403 /* FoodScreen.swift in Sources */,
 				578D0D3325F02FCC0067D911 /* FoodScreenOld.swift in Sources */,
+				57DB9A99260A187E0018DD1A /* SomeUIKitVC.swift in Sources */,
 				577F238325F98BB200A24403 /* RequestHandler.swift in Sources */,
+				574F866226092C3000B49803 /* Router.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
