@@ -20,9 +20,7 @@ struct FoodScreen: View {
         Text("\($0.calories) cal").fixedSize(horizontal: false, vertical: true)
           //          NavigationLink(destination: FoodDetailScreen(receipt: $0)) {}
           .overlay(
-            NavigationLink(destination: FoodDetailScreen(receipt: $0), isActive: $router.isSuperFoodShowed, label: {
-              EmptyView().hidden()
-            })
+            NavigationLink(destination: FoodDetailScreen(receipt: $0), isActive: $router.isSuperFoodShowed) {}
           )
       }
       .navigationTitle("Food recipes")
